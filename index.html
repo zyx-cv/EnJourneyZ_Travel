@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
@@ -173,19 +173,39 @@
       border: 1px solid rgba(255,255,255,.72);
       border-radius: 8px;
       background:
-        linear-gradient(180deg, rgba(255,253,248,.92), rgba(255,253,248,.72)),
-        radial-gradient(circle at 72% 24%, rgba(227,179,79,.34), transparent 24%),
-        linear-gradient(160deg, rgba(207,230,229,.9), rgba(248,241,230,.9));
+        radial-gradient(circle at 74% 22%, rgba(227,179,79,.26), transparent 26%),
+        linear-gradient(160deg, rgba(207,230,229,.8), rgba(255,253,248,.92) 48%, rgba(248,241,230,.9));
       box-shadow: var(--shadow);
       overflow: hidden;
       position: relative;
+      display: grid;
+      place-items: center;
+      padding: 22px;
     }
 
-    .couple-scene {
-      width: 100%;
-      height: 100%;
-      min-height: 460px;
+    .couple-card::after {
+      content: "";
+      position: absolute;
+      width: 58%;
+      height: 28px;
+      left: 21%;
+      bottom: 38px;
+      border-radius: 999px;
+      background: rgba(17, 63, 66, .18);
+      filter: blur(18px);
+      animation: shadow-float 3.4s ease-in-out infinite;
+    }
+
+    .couple-visual {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 420px);
+      height: auto;
       display: block;
+      border-radius: 6px;
+      object-fit: contain;
+      filter: drop-shadow(0 26px 34px rgba(22,33,31,.2));
+      animation: gentle-float 3.4s ease-in-out infinite;
     }
 
     .cloud { animation: drift 13s ease-in-out infinite alternate; }
@@ -201,6 +221,16 @@
     @keyframes walk {
       0%, 100% { transform: translateY(0) rotate(-.4deg); }
       50% { transform: translateY(-8px) rotate(.6deg); }
+    }
+
+    @keyframes gentle-float {
+      0%, 100% { transform: translateY(0) rotate(-.4deg); }
+      50% { transform: translateY(-14px) rotate(.5deg); }
+    }
+
+    @keyframes shadow-float {
+      0%, 100% { transform: scale(1); opacity: .72; }
+      50% { transform: scale(.86); opacity: .45; }
     }
 
     @keyframes swing {
@@ -386,13 +416,6 @@
       font-weight: 800;
     }
 
-    .journal {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 18px;
-      align-items: start;
-    }
-
     .note-card,
     .timeline {
       border: 1px solid var(--line);
@@ -459,10 +482,8 @@
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; padding-top: 34px; }
       .couple-card { min-height: 360px; }
-      .couple-scene { min-height: 360px; }
       .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .guide-grid,
-      .journal { grid-template-columns: 1fr; }
+      .guide-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 620px) {
@@ -492,7 +513,9 @@
       .hair,
       .heart,
       .guide-card,
-      .button {
+      .button,
+      .couple-visual,
+      .couple-card::after {
         animation: none;
         transition: none;
       }
@@ -511,7 +534,6 @@
       <a class="brand" href="./">EnJourneyZ</a>
       <nav class="nav-links" aria-label="主导航">
         <a href="#guides">旅行记录</a>
-        <a href="#journal">旅行手记</a>
         <a href="https://github.com/zyx-cv/EnJourneyZ_Travel">GitHub</a>
       </nav>
     </div>
@@ -522,68 +544,14 @@
       <div>
         <div class="eyebrow">Travel Blogger Journal</div>
         <h1 id="page-title"><span>两个人的旅行，</span><span>一页一页</span><span>认真记录。</span></h1>
-        <p class="lead"><span>EnJourneyZ 是一个旅行记录博客。</span><span>这里把真实行程整理成可阅读、可分享的旅行网页。</span><span>出发时，也能直接照着走。</span><span>从城市短途到海岛火山，每一篇都保留路线、酒店、交通和路上的小判断。</span></p>
+        <p class="lead"><span>EnJourneyZ 是一个旅行记录博客。</span><span>这里把真实行程整理成网页。</span><span>可阅读，可分享，出发时也能直接照着走。</span><span>从城市短途到海岛火山。</span><span>每一篇都保留路线、酒店、交通和路上的小判断。</span></p>
         <div class="hero-actions">
           <a class="button primary" href="#guides">查看旅行记录</a>
-          <a class="button" href="#journal">看记录方式</a>
         </div>
       </div>
 
-      <div class="couple-card" aria-label="情侣背包旅行小人动态插画">
-        <svg class="couple-scene" viewBox="0 0 520 500" role="img" aria-labelledby="couple-title couple-desc">
-          <title id="couple-title">情侣背包旅行小人</title>
-          <desc id="couple-desc">一男一女背包旅行的小人沿着路线向前走，云朵和虚线路线有轻微动画。</desc>
-          <rect width="520" height="500" fill="transparent"/>
-          <circle cx="418" cy="84" r="42" fill="#e3b34f" opacity=".76"/>
-          <g class="cloud" fill="#ffffff" opacity=".86">
-            <ellipse cx="92" cy="88" rx="34" ry="18"/>
-            <ellipse cx="126" cy="82" rx="28" ry="22"/>
-            <ellipse cx="156" cy="92" rx="38" ry="17"/>
-          </g>
-          <g class="cloud second" fill="#ffffff" opacity=".72">
-            <ellipse cx="312" cy="136" rx="28" ry="15"/>
-            <ellipse cx="342" cy="128" rx="23" ry="19"/>
-            <ellipse cx="370" cy="138" rx="31" ry="14"/>
-          </g>
-          <path d="M36 380 C118 336, 164 430, 240 378 S372 318, 484 386" fill="none" stroke="#0d6f73" stroke-width="5" stroke-linecap="round" opacity=".25"/>
-          <path class="route-dash" d="M36 380 C118 336, 164 430, 240 378 S372 318, 484 386" fill="none" stroke="#0d6f73" stroke-width="5" stroke-linecap="round" stroke-dasharray="14 18"/>
-          <path d="M0 398 C86 372, 142 404, 218 386 S366 342, 520 392 L520 500 L0 500 Z" fill="#dbe8d8"/>
-          <path d="M0 426 C106 390, 172 438, 266 410 S410 384, 520 432 L520 500 L0 500 Z" fill="#b9cfad"/>
-          <g transform="translate(160 205)">
-            <g class="traveler boy">
-              <rect x="-48" y="102" width="30" height="58" rx="14" fill="#7b9c68"/>
-              <circle cx="-24" cy="56" r="28" fill="#f3c9a9"/>
-              <path d="M-51 54 C-44 18, -4 22, 2 52 C-12 42, -30 41, -51 54Z" fill="#26312e"/>
-              <path d="M-50 88 C-34 72, -12 72, 4 88 L12 154 C-12 168, -40 166, -60 152Z" fill="#0d6f73"/>
-              <path class="arm" d="M-54 102 C-86 126, -82 152, -58 162" fill="none" stroke="#f3c9a9" stroke-width="12" stroke-linecap="round"/>
-              <path class="arm" d="M2 102 C32 122, 36 152, 12 164" fill="none" stroke="#f3c9a9" stroke-width="12" stroke-linecap="round"/>
-              <path d="M-42 154 L-58 230" stroke="#233431" stroke-width="16" stroke-linecap="round"/>
-              <path d="M-12 154 L2 230" stroke="#233431" stroke-width="16" stroke-linecap="round"/>
-              <rect x="-86" y="100" width="34" height="62" rx="12" fill="#e3b34f"/>
-              <path d="M-54 112 C-64 100, -72 96, -86 104" fill="none" stroke="#8f6b25" stroke-width="5" stroke-linecap="round"/>
-            </g>
-            <g class="traveler girl" transform="translate(116 4)">
-              <rect x="-34" y="100" width="30" height="58" rx="14" fill="#aa543b"/>
-              <circle cx="-10" cy="52" r="27" fill="#f5c8a7"/>
-              <path class="hair" d="M-38 50 C-34 14, 0 16, 14 42 C16 70, 2 88, -20 84 C-5 70, -4 54, -38 50Z" fill="#4b2d25"/>
-              <path d="M-42 86 C-22 70, 2 72, 18 90 L26 154 C2 168, -28 166, -50 152Z" fill="#d98265"/>
-              <path class="arm" d="M-46 102 C-76 122, -72 152, -48 162" fill="none" stroke="#f5c8a7" stroke-width="12" stroke-linecap="round"/>
-              <path class="arm" d="M18 104 C48 126, 46 152, 22 164" fill="none" stroke="#f5c8a7" stroke-width="12" stroke-linecap="round"/>
-              <path d="M-30 154 L-46 230" stroke="#233431" stroke-width="16" stroke-linecap="round"/>
-              <path d="M0 154 L14 230" stroke="#233431" stroke-width="16" stroke-linecap="round"/>
-              <rect x="16" y="98" width="34" height="62" rx="12" fill="#0d6f73"/>
-              <path d="M16 112 C8 100, 0 96, -12 102" fill="none" stroke="#075255" stroke-width="5" stroke-linecap="round"/>
-            </g>
-          </g>
-          <g class="heart" fill="#aa543b">
-            <path d="M276 164 C276 151, 294 148, 301 160 C308 148, 326 151, 326 164 C326 181, 301 194, 301 194 C301 194, 276 181, 276 164Z"/>
-          </g>
-          <g fill="#113f42" opacity=".85">
-            <circle cx="78" cy="392" r="5"/>
-            <circle cx="438" cy="388" r="5"/>
-            <circle cx="378" cy="338" r="4"/>
-          </g>
-        </svg>
+      <div class="couple-card">
+        <img class="couple-visual" src="assets/travel-couple-3d.png" alt="情侣背包旅行人物，两个立体卡通旅行者悬浮在暖色背景中">
       </div>
     </section>
 
@@ -641,35 +609,6 @@
       </div>
     </section>
 
-    <section id="journal" aria-labelledby="journal-title">
-      <div class="section-head">
-        <h2 id="journal-title">旅行手记</h2>
-        <p>这个博客不只放景点清单，更关心一趟旅程怎么真正走起来：什么时候出发、在哪休息、哪里要留余量。</p>
-      </div>
-
-      <div class="journal">
-        <div class="note-card">
-          <h3>记录方式</h3>
-          <p>每篇攻略都按“基础准备、每日行程、傻瓜式执行、路书交通、备用方案”整理。适合自己复盘，也适合出发前发给同行的人。</p>
-        </div>
-
-        <div class="timeline">
-          <h3>最近更新</h3>
-          <div class="timeline-item">
-            <time>2026-01</time>
-            <div><b>天津短途</b><span>新增元旦天津旅行攻略，补齐冬季穿搭、酒店与每日执行路线。</span></div>
-          </div>
-          <div class="timeline-item">
-            <time>2026-09</time>
-            <div><b>Indonesia</b><span>整理国庆印尼长线攻略，覆盖 East Java、Komodo 和 Bali。</span></div>
-          </div>
-          <div class="timeline-item">
-            <time>Next</time>
-            <div><b>下一篇旅行记录</b><span>新的目的地会继续放进同一个旅行博客，保持统一风格和目录。</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="shell">
