@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>元旦天津旅行攻略</title>
+  <style>
+    :root {
+      --ink: #17211f;
+      --muted: #61716c;
+      --paper: #f7f0e4;
+      --panel: #fffdf8;
+      --line: #ded1bd;
+      --teal: #0d6f73;
+      --river: #164a58;
+      --brick: #a14933;
+      --gold: #bd8d3b;
+      --mist: #edf5f2;
+      --shadow: 0 18px 48px rgba(24, 33, 31, .12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(13,111,115,.11), transparent 440px),
+        var(--paper);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.68;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 240, 228, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(222, 209, 189, .82);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 12px 0;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--river);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+
+    .nav-links a {
+      flex: 0 0 auto;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      color: #4f615b;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      border-color: var(--line);
+      background: rgba(255,255,255,.66);
+      outline: none;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+      gap: 26px;
+      align-items: stretch;
+      padding: 44px 0 28px;
+    }
+
+    .hero-copy {
+      padding: 38px 0;
+    }
+
+    .eyebrow {
+      color: var(--brick);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 12px 0 16px;
+      color: var(--river);
+      font-size: clamp(42px, 8vw, 86px);
+      line-height: .96;
+      letter-spacing: 0;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .lead {
+      max-width: 700px;
+      margin: 0;
+      color: #4c5c57;
+      font-size: clamp(17px, 2vw, 20px);
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+
+    .lead span { display: block; }
+
+    .hero-photo {
+      min-height: 430px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.7);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.52)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Tianjin_Eye_3.jpg?width=1600") center / cover;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .photo-caption {
+      width: 100%;
+      padding: 22px;
+      color: #fff;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,.42));
+    }
+
+    .photo-caption b {
+      display: block;
+      font-size: 22px;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .photo-caption span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,255,255,.82);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+      word-break: break-all;
+    }
+
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 8px 0 42px;
+    }
+
+    .kpi {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,253,248,.76);
+    }
+
+    .kpi b {
+      display: block;
+      color: var(--river);
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .kpi span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    section {
+      scroll-margin-top: 78px;
+      margin-bottom: 44px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--river);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      max-width: 440px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card,
+    .day-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 12px 34px rgba(24, 33, 31, .07);
+    }
+
+    .card {
+      padding: 18px;
+    }
+
+    .card h3,
+    .day-card h3 {
+      margin: 0 0 10px;
+      color: var(--river);
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .card p,
+    .day-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 20px;
+      color: #43504c;
+    }
+
+    li + li { margin-top: 6px; }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #f0eadf;
+      color: #53625d;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .day-card {
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .day-head {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      padding: 18px;
+      background: linear-gradient(135deg, rgba(13,111,115,.12), rgba(189,141,59,.12));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .date {
+      color: var(--brick);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .day-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+
+    .panel {
+      padding: 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .panel:last-child { border-right: 0; }
+
+    .panel-title {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--brick);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .route {
+      display: grid;
+      gap: 10px;
+    }
+
+    .route-step {
+      padding: 12px;
+      border-left: 3px solid var(--teal);
+      background: var(--mist);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .route-step b {
+      display: block;
+      color: var(--river);
+      margin-bottom: 4px;
+    }
+
+    .note {
+      padding: 16px;
+      border: 1px solid rgba(13,111,115,.24);
+      border-radius: 8px;
+      background: rgba(237,245,242,.82);
+      color: #41514c;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+    }
+
+    .table th,
+    .table td {
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .table th {
+      color: var(--river);
+      background: #f0eadf;
+      font-size: 14px;
+    }
+
+    .table tr:last-child td { border-bottom: 0; }
+
+    footer {
+      margin-top: 40px;
+      padding: 26px 0 48px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; padding-top: 24px; }
+      .hero-copy { padding: 20px 0 0; }
+      .hero-photo { min-height: 320px; }
+      .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid,
+      .grid.two { grid-template-columns: 1fr; }
+      .day-body { grid-template-columns: 1fr; }
+      .panel {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .panel:last-child { border-bottom: 0; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .nav { align-items: flex-start; flex-direction: column; }
+      h1 { font-size: 38px; line-height: 1.08; }
+      .photo-caption b { font-size: 18px; line-height: 1.28; }
+      .kpis { grid-template-columns: 1fr; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 8px; }
+      .day-head { grid-template-columns: 1fr; gap: 8px; }
+      .table { font-size: 14px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="../">EnJourneyZ</a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#overview">总览</a>
+        <a href="#prepare">准备</a>
+        <a href="#days">每日行程</a>
+        <a href="#food">吃喝</a>
+        <a href="#backup">备用方案</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="overview" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <div class="eyebrow">2026 元旦 · 天津短途</div>
+        <h1 id="page-title">元旦天津旅行攻略</h1>
+        <p class="lead"><span>从北京南站出发，先到滨海住一晚。</span><span>第二天从东疆港一路进城。</span><span>看海河、意风区、古文化街和天津之眼。</span><span>最后用瓷房子收尾回北京。</span><span>页面按“傻瓜式执行”整理，适合出门当天直接照着走。</span></p>
+      </div>
+      <div class="hero-photo" role="img" aria-label="天津之眼摩天轮">
+        <div class="photo-caption">
+          <b>核心动线：滨海 → 海河 → 老城 → 天津站</b>
+          <span>冬季城市短途，少背东西，多用地铁和打车衔接。</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="kpis" aria-label="行程概览">
+      <div class="kpi"><b>3 天</b><span>2025-12-31 至 2026-01-02</span></div>
+      <div class="kpi"><b>2 晚</b><span>塘沽一晚，津湾广场一晚</span></div>
+      <div class="kpi"><b>高铁</b><span>北京南站往返天津方向</span></div>
+      <div class="kpi"><b>冬季</b><span>防风、保暖、少量行李</span></div>
+    </div>
+
+    <section id="prepare">
+      <div class="section-head">
+        <h2>基础准备</h2>
+        <p>天津元旦前后通常偏冷、风感明显，海边和海河边体感会更低。穿搭优先保暖和防风。</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>天气与穿搭</h3>
+          <ul>
+            <li>按华北冬季体感准备：羽绒服或厚棉服是主力。</li>
+            <li>内搭建议用保暖内衣、毛衣或抓绒，方便室内脱换。</li>
+            <li>东疆港和海河边风大，围巾、帽子、手套很有用。</li>
+            <li>鞋子选舒适防滑款，古文化街、意风区和海河边都要走路。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>证件与票务</h3>
+          <ul>
+            <li>身份证随身放，进站、酒店入住都要用。</li>
+            <li>提前确认北京南站 → 滨海站、天津站 → 北京南站车票时间。</li>
+            <li>天津之眼如计划乘坐，提前查看预约和开放情况。</li>
+            <li>瓷房子如计划入内，出发前确认门票和开放时间。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>随身装备</h3>
+          <ul>
+            <li>充电宝、充电线、耳机、纸巾、湿巾。</li>
+            <li>暖宝宝可带 2-4 片，海边和夜景时段更需要。</li>
+            <li>双肩包或小行李箱即可，第二天换酒店会移动行李。</li>
+            <li>常用药放小袋：肠胃药、感冒药、创可贴。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>酒店与交通</h2>
+        <p>这趟行程的关键是两次换城市区域：第一晚住滨海，第二天进天津市区后住津湾广场附近。</p>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>住宿安排</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>日期</th>
+                <th>酒店</th>
+                <th>执行要点</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12 月 31 日</td>
+                <td>朗丽兹酒店(天津滨海新区塘沽高铁站店)</td>
+                <td>含早餐。到滨海站后优先去酒店放行李，晚上不要安排太满。</td>
+              </tr>
+              <tr>
+                <td>1 月 1 日</td>
+                <td>缤朋雅岸精品酒店(天津火车站津湾广场店)</td>
+                <td>位置适合看津湾广场、解放桥、世纪钟，第二天去天津站也方便。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h3>交通原则</h3>
+          <ul>
+            <li>跨城：高铁优先，按车票时间提前到站。</li>
+            <li>滨海内部：景点分散，寒冷天气优先打车。</li>
+            <li>市区内部：津湾广场、解放桥、世纪钟可以步行串联。</li>
+            <li>从古文化街到天津之眼距离不远，可步行或打车，按体力决定。</li>
+            <li>第二天从酒店去瓷房子，再去天津站，时间比较从容。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="days">
+      <div class="section-head">
+        <h2>每日行程卡</h2>
+        <p>每一天都分成“详细攻略、傻瓜式执行、路书交通”三栏，出门时按顺序看即可。</p>
+      </div>
+
+      <article class="day-card">
+        <div class="day-head">
+          <div class="date">Day 1 · 2025-12-31</div>
+          <div>
+            <h3>北京南站 → 滨海站 → 塘沽酒店</h3>
+            <p>第一天目标很简单：顺利抵达天津滨海新区，入住朗丽兹酒店，把第二天早起和进城路线准备好。</p>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="panel">
+            <span class="panel-title">详细攻略</span>
+            <ul>
+              <li>出发前检查身份证、高铁票、酒店订单。</li>
+              <li>北京南站至少提前 45 分钟到，节假日前后安检和候车人会多。</li>
+              <li>到滨海站后不急着玩，先去酒店放行李。</li>
+              <li>晚上在酒店附近简单吃饭，早点休息，第二天会比较满。</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <span class="panel-title">傻瓜式执行</span>
+            <ol>
+              <li>出门前拍一下身份证和车票截图备用。</li>
+              <li>到北京南站后先看大屏确认检票口。</li>
+              <li>上车后把第二天路线收藏到地图。</li>
+              <li>到滨海站后直接导航到酒店。</li>
+              <li>入住后确认次日早餐时间和退房时间。</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <span class="panel-title">路书交通</span>
+            <div class="route">
+              <div class="route-step"><b>北京南站</b><span>按车票时间进站候车。</span></div>
+              <div class="route-step"><b>北京南站 → 滨海站</b><span>高铁到达滨海新区。</span></div>
+              <div class="route-step"><b>滨海站 → 朗丽兹酒店</b><span>优先打车或按地图选择公共交通，冬天少拖行李走远路。</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-head">
+          <div class="date">Day 2 · 2026-01-01</div>
+          <div>
+            <h3>滨海早点与海边 → 天津市区海河线 → 老城夜景</h3>
+            <p>这一天是主行程。上午在滨海吃早点、看东疆港方向；下午进市区看津湾广场、解放桥、世纪钟和意风区；晚上去古文化街、天津之眼和西北角。</p>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="panel">
+            <span class="panel-title">详细攻略</span>
+            <ul>
+              <li>早上先去老姑大早点(新港店)，吃完再往东疆港方向走。</li>
+              <li>肯德基(东疆港亲海公园小站店)可作为集合、休息、上厕所和补热饮的位置。</li>
+              <li>新港九号路适合看港区城市感，但冬天风大，停留别太久。</li>
+              <li>进市区后先到缤朋雅岸精品酒店放行李，再轻装逛海河。</li>
+              <li>津湾广场、解放桥、世纪钟广场基本可以一条线步行。</li>
+              <li>天津意大利风情旅游区适合下午到傍晚拍照，建筑密集，走起来不累。</li>
+              <li>晚饭按原计划去津城一味(滨江道店)，之后去古文化街、天津之眼。</li>
+              <li>西北角(新春花苑店)更适合当作夜宵或第二轮小吃点，注意别把胃口全留到太晚。</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <span class="panel-title">傻瓜式执行</span>
+            <ol>
+              <li>早餐后退房，把行李带上。</li>
+              <li>打车去东疆港方向，先用肯德基做休息点。</li>
+              <li>海边和新港九号路拍完照，立刻查去市区酒店的路线。</li>
+              <li>到缤朋雅岸精品酒店后先寄存或入住。</li>
+              <li>从酒店步行去津湾广场。</li>
+              <li>按“津湾广场 → 解放桥 → 世纪钟广场 → 意风区”的顺序走。</li>
+              <li>晚饭后前往古文化街。</li>
+              <li>从古文化街去天津之眼，看体力选择步行或打车。</li>
+              <li>想吃夜宵再去西北角，不想折腾就回酒店。</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <span class="panel-title">路书交通</span>
+            <div class="route">
+              <div class="route-step"><b>朗丽兹酒店 → 老姑大早点(新港店)</b><span>早饭优先，避免后面空腹赶路。</span></div>
+              <div class="route-step"><b>老姑大早点 → 东疆港方向</b><span>冬天建议打车，肯德基可作为临时休息点。</span></div>
+              <div class="route-step"><b>东疆港 → 津湾广场酒店</b><span>跨区域移动，优先打车或地铁组合，以当天地图为准。</span></div>
+              <div class="route-step"><b>津湾广场 → 解放桥 → 世纪钟</b><span>海河边步行串联，夜景很好看。</span></div>
+              <div class="route-step"><b>意风区 → 古文化街 → 天津之眼</b><span>晚间动线，注意保暖和关门时间。</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="day-card">
+        <div class="day-head">
+          <div class="date">Day 3 · 2026-01-02</div>
+          <div>
+            <h3>瓷房子 → 天津站 → 北京南站</h3>
+            <p>最后一天不要塞太多。上午看瓷房子，之后回酒店取行李或直接去天津站，按车票时间回北京南站。</p>
+          </div>
+        </div>
+        <div class="day-body">
+          <div class="panel">
+            <span class="panel-title">详细攻略</span>
+            <ul>
+              <li>起床后先确认退房时间和返程高铁时间。</li>
+              <li>瓷房子外观很有辨识度，如果只拍外观，停留时间可以控制在 20-40 分钟。</li>
+              <li>如要入内参观，提前确认开放和排队情况。</li>
+              <li>天津站周边节假日人多，至少提前 45 分钟到站更稳。</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <span class="panel-title">傻瓜式执行</span>
+            <ol>
+              <li>早餐后收拾行李，贵重物品随身带。</li>
+              <li>退房或寄存行李。</li>
+              <li>导航去瓷房子，先拍外观再决定是否入内。</li>
+              <li>按车票时间倒推，提前回酒店取行李或直接去天津站。</li>
+              <li>进站后确认检票口，坐高铁回北京南站。</li>
+            </ol>
+          </div>
+          <div class="panel">
+            <span class="panel-title">路书交通</span>
+            <div class="route">
+              <div class="route-step"><b>缤朋雅岸精品酒店 → 瓷房子</b><span>打车最省心，也可按地图选择地铁或公交。</span></div>
+              <div class="route-step"><b>瓷房子 → 天津站</b><span>返程日不要卡点，预留进站和找检票口时间。</span></div>
+              <div class="route-step"><b>天津站 → 北京南站</b><span>高铁返程，车次以票面为准。</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="food">
+      <div class="section-head">
+        <h2>吃喝清单</h2>
+        <p>这趟的吃喝重点是早餐和天津特色小吃，正餐不用追求太多家，避免影响行程节奏。</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>老姑大早点(新港店)</h3>
+          <p>适合 Day 2 早上开局。早点吃饱后再去海边，抗风能力会好很多。</p>
+          <div class="tag-row"><span class="tag">早餐</span><span class="tag">滨海</span><span class="tag">先吃再逛</span></div>
+        </div>
+        <div class="card">
+          <h3>津城一味(滨江道店)</h3>
+          <p>适合 Day 2 晚饭。位置衔接市区逛街和海河夜景，吃完再去古文化街方向。</p>
+          <div class="tag-row"><span class="tag">晚饭</span><span class="tag">市区</span><span class="tag">衔接夜景</span></div>
+        </div>
+        <div class="card">
+          <h3>西北角(新春花苑店)</h3>
+          <p>适合做小吃补充。晚上去的话注意体力，想轻松就把它放成可选项。</p>
+          <div class="tag-row"><span class="tag">小吃</span><span class="tag">夜宵</span><span class="tag">可选</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="backup">
+      <div class="section-head">
+        <h2>备用方案</h2>
+        <p>短途旅行最怕天气冷、风太大、排队久。下面是当天可以直接替换的处理办法。</p>
+      </div>
+      <div class="grid two">
+        <div class="card">
+          <h3>如果风太大</h3>
+          <ul>
+            <li>东疆港和新港九号路缩短停留，只保留拍照打卡。</li>
+            <li>把更多时间给津湾广场、意风区、商场和餐厅。</li>
+            <li>天津之眼只看夜景，不强求乘坐。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>如果时间不够</h3>
+          <ul>
+            <li>Day 2 优先保留：津湾广场、解放桥、世纪钟、意风区、天津之眼。</li>
+            <li>古文化街和西北角二选一，别为了打卡把返程和休息搞乱。</li>
+            <li>Day 3 如果睡晚了，瓷房子只拍外观，然后直接去天津站。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note" style="margin-top:14px;">
+        出行当天所有营业时间、预约、门票、交通时间以地图、车票和官方信息为准。这个页面负责给出顺序和决策，不替代当天确认。
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>图片来源：Wikimedia Commons。行程来源：元旦天津 Trip Itinerary 文档。</span>
+  </footer>
+</body>
+</html>
