@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>国庆印尼旅行攻略 | East Java · Komodo · Bali</title>
+  <style>
+    :root {
+      --ink: #1f2523;
+      --muted: #63706a;
+      --paper: #fbf7ed;
+      --panel: #fffdf7;
+      --line: #ded5c4;
+      --teal: #0d6f73;
+      --green: #496f46;
+      --lava: #923f2b;
+      --sand: #e6d2a8;
+      --charcoal: #202421;
+      --shadow: 0 16px 44px rgba(31,37,35,.12);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: var(--teal); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .eyebrow { color: var(--lava); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; }
+
+    header {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(13,24,23,.86), rgba(13,24,23,.42)),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Gunung_Bromo_sunrise_-_Indonesia.jpg") center 42% / cover;
+      min-height: 82vh;
+      display: grid;
+      align-items: end;
+      padding: 44px 0 34px;
+    }
+    .hero { max-width: 880px; padding-bottom: 24px; }
+    .hero h1 {
+      margin: 12px 0 18px;
+      font-size: clamp(42px, 8vw, 96px);
+      line-height: .95;
+      letter-spacing: 0;
+    }
+    .hero p { max-width: 720px; font-size: 18px; color: rgba(255,255,255,.9); margin: 0 0 26px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 880px;
+    }
+    .hero-chip {
+      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+      padding: 14px;
+      border-radius: var(--radius);
+      min-height: 82px;
+    }
+    .hero-chip b { display: block; font-size: 22px; line-height: 1.1; }
+    .hero-chip span { color: rgba(255,255,255,.78); font-size: 13px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(251,247,237,.94);
+      backdrop-filter: blur(12px);
+    }
+    nav .wrap { display: flex; gap: 10px; overflow-x: auto; padding: 10px 16px; }
+    nav a {
+      color: var(--ink);
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 999px;
+      padding: 8px 12px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    main { padding: 44px 0 76px; }
+    section { margin: 0 0 54px; scroll-margin-top: 78px; }
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+    h2 { margin: 0; font-size: clamp(26px, 4vw, 44px); line-height: 1.08; letter-spacing: 0; }
+    h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.25; letter-spacing: 0; }
+    h4 { margin: 0 0 8px; font-size: 16px; }
+    p { margin: 0 0 12px; }
+    .note { color: var(--muted); font-size: 14px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 8px 24px rgba(31,37,35,.05);
+    }
+    .dark {
+      background: var(--charcoal);
+      color: #fff;
+      border-color: #343a36;
+    }
+    .dark .note { color: rgba(255,255,255,.72); }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 9px;
+      margin: 0 6px 6px 0;
+      background: rgba(255,255,255,.55);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .kpi .card { min-height: 118px; }
+    .kpi b { display: block; font-size: 26px; color: var(--teal); line-height: 1.1; }
+
+    .photo-grid { display: grid; grid-template-columns: 1.35fr .85fr .85fr; gap: 12px; }
+    .photo {
+      min-height: 260px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      position: relative;
+      background: #ddd;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .photo figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      color: #fff;
+      padding: 34px 14px 12px;
+      background: linear-gradient(transparent, rgba(0,0,0,.68));
+      font-size: 13px;
+    }
+    .photo.tall { grid-row: span 2; min-height: 532px; }
+
+    ul.clean { margin: 0; padding-left: 18px; }
+    ul.clean li { margin-bottom: 8px; }
+    .checklist { columns: 2; column-gap: 28px; }
+    .checklist li { break-inside: avoid; }
+
+    .timeline { position: relative; display: grid; gap: 14px; }
+    .day-card {
+      display: grid;
+      grid-template-columns: 148px 1fr;
+      gap: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .datebox {
+      border-right: 1px solid var(--line);
+      padding-right: 16px;
+    }
+    .datebox strong { display: block; color: var(--lava); font-size: 15px; }
+    .datebox span { display: block; font-size: 24px; font-weight: 800; line-height: 1.08; margin-top: 6px; }
+    .day-content { display: grid; grid-template-columns: 1.2fr .8fr; gap: 16px; }
+    .mini {
+      background: #f6efe1;
+      border-radius: var(--radius);
+      padding: 12px;
+      border: 1px solid #e8dcc8;
+    }
+    .mini + .mini { margin-top: 10px; }
+    .route-step {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding: 16px 0;
+    }
+    .route-step:first-child { padding-top: 0; }
+    .route-step:last-child { border-bottom: 0; padding-bottom: 0; }
+    .route-step time { color: var(--lava); font-weight: 800; }
+    .step-guide-grid { display: grid; gap: 14px; }
+    .step-guide-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .step-guide-card .step-head {
+      padding: 14px 18px;
+      background: #efe2c9;
+      border-bottom: 1px solid var(--line);
+    }
+    .step-guide-card .step-head h3 { margin: 0; }
+    .step-guide-card .step-head p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+    .day-playbook-grid { display: grid; gap: 18px; }
+    .day-playbook-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(31,37,35,.05);
+    }
+    .playbook-head {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 16px;
+      padding: 16px 18px;
+      background: #efe2c9;
+      border-bottom: 1px solid var(--line);
+    }
+    .playbook-head strong { color: var(--lava); font-size: 14px; }
+    .playbook-head span { display: block; font-size: 24px; font-weight: 800; line-height: 1.12; }
+    .playbook-panels {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr 1fr;
+      gap: 0;
+    }
+    .playbook-panel {
+      padding: 16px;
+      border-right: 1px solid var(--line);
+    }
+    .playbook-panel:last-child { border-right: 0; }
+    .playbook-panel h4 {
+      margin: 0 0 10px;
+      color: var(--teal);
+      font-size: 15px;
+    }
+    .playbook-panel ol,
+    .playbook-panel ul { margin: 0; padding-left: 19px; }
+    .playbook-panel li { margin-bottom: 8px; }
+    .playbook-panel.detail-panel { background: #fffdf7; }
+    .playbook-panel.execute-panel { background: #fbf4e7; }
+    .playbook-panel.road-panel { background: #f7efe0; }
+    .steps {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+    }
+    .steps time,
+    .steps div {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+    }
+    .steps time {
+      color: var(--lava);
+      font-weight: 800;
+      background: #faf1df;
+    }
+    .steps time:nth-last-child(2),
+    .steps div:last-child { border-bottom: 0; }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .source-list a {
+      display: block;
+      padding: 12px 14px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    #section-itinerary,
+    #section-stepguide,
+    #section-roadbook { display: none; }
+
+    @media (max-width: 880px) {
+      header { min-height: 72vh; }
+      .hero-grid, .kpi, .grid-2, .grid-3, .photo-grid, .day-content, .source-list, .playbook-head, .playbook-panels { grid-template-columns: 1fr; }
+      .kpi { margin-top: 18px; }
+      .photo, .photo.tall { min-height: 260px; }
+      .day-card { grid-template-columns: 1fr; }
+      .datebox { border-right: 0; border-bottom: 1px solid var(--line); padding: 0 0 12px; }
+      .route-step { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 88px 1fr; }
+      .playbook-panel { border-right: 0; border-bottom: 1px solid var(--line); }
+      .playbook-panel:last-child { border-bottom: 0; }
+      .checklist { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header id="trip-title">
+    <div class="wrap hero">
+      <div class="eyebrow">2026 Golden Week · Indonesia Field Guide</div>
+      <h1>国庆印尼旅行攻略</h1>
+      <p>东爪哇火山与瀑布、拉布安巴焦与科莫多海域、巴厘岛海岸与岛屿。按真实行程整理成可出发前检查、旅途中快速查、之后可商品化的路书网页。</p>
+      <div class="hero-grid">
+        <div class="hero-chip"><b>10天</b><span>2026-09-26 至 2026-10-05</span></div>
+        <div class="hero-chip"><b>3段</b><span>East Java · Komodo · Bali</span></div>
+        <div class="hero-chip"><b>4晚</b><span>巴厘岛 Badung / Kuta 区域</span></div>
+        <div class="hero-chip"><b>高强度</b><span>凌晨日出、船、飞机、包车混合</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="页面导航">
+    <div class="wrap">
+      <a href="#overview">总览</a>
+      <a href="#section-basics">基础攻略</a>
+      <a href="#section-weather">天气穿搭</a>
+      <a href="#section-packing">装备清单</a>
+      <a href="#section-dayplaybook">每日作战卡</a>
+      <a href="#section-sources">资料来源</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="kpi" id="overview">
+      <div class="card"><b>北京</b><span>大兴出发，经吉隆坡、泗水入境印尼。</span></div>
+      <div class="card"><b>Lumajang</b><span>East Java，Tumpak Sewu 与 Semeru 火山视野。</span></div>
+      <div class="card"><b>布罗莫</b><span>凌晨日出、沙海、火山口。</span></div>
+      <div class="card"><b>Labuan Bajo</b><span>West Manggarai，Komodo 出海、巨蜥与粉沙滩。</span></div>
+      <div class="card"><b>Bali</b><span>Nusa Penida、Lovina、Ubud、Jimbaran、Tanah Lot。</span></div>
+    </div>
+
+    <section aria-label="路线照片">
+      <div class="photo-grid">
+        <figure class="photo tall">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tumpak_sewu_waterfall.jpg" alt="Tumpak Sewu Waterfall">
+          <figcaption>Tumpak Sewu Waterfall · Lumajang, East Java</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Padar_Island%2C_Komodo_National_Park%2C_Indonesia%2C_20250822_0934_2664.jpg" alt="Padar Island Komodo National Park">
+          <figcaption>Komodo National Park · Padar Island</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Kelingking_Beach%2C_Nusa_Penida.jpg" alt="Kelingking Beach Nusa Penida">
+          <figcaption>Kelingking Beach · Nusa Penida</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_in_Tanah_Lot%2C_Bali.jpg" alt="Tanah Lot Bali">
+          <figcaption>Tanah Lot · 巴厘岛日落</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pink_Beach%2C_Padar_Island%2C_Komodo_National_Park.jpg" alt="Pink Beach Komodo">
+          <figcaption>Pink Beach · 科莫多海域</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="section-basics">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Before Departure</div>
+          <h2>基础攻略</h2>
+        </div>
+        <p class="note">建议出发前 2 周开始处理签证、船票、包车和火山/出海确认。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>证件与入境</h3>
+          <ul class="clean">
+            <li>中国护照可申请 Indonesia eVisa / Visitor Visa，也可按官方口岸规则办理落地签；官方页面列出中国在适用国家中。</li>
+            <li>印尼 Visitor Visa 为单次入境，30 天停留，官方费用 IDR 500,000；护照需自抵达日起至少 6 个月有效。</li>
+            <li>建议提前 48 小时以上申请 eVOA / Visitor Visa，保存电子版与打印版。</li>
+            <li>入境前填写 All Indonesia Arrival Card，准备护照、航班、酒店地址、签证信息。</li>
+            <li>进入巴厘岛需支付 Love Bali 外国游客 Levy，官方 FAQ 为 IDR 150,000 / 人 / 次，保存 QR voucher。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>钱、通讯、支付</h3>
+          <ul class="clean">
+            <li>现金：准备 IDR 小额现金，火山、瀑布、司机小费、停车费、码头费和临时厕所常用现金。</li>
+            <li>支付：Visa / Mastercard 在酒店和部分餐厅可用；小店、码头、乡村景点不要假设能刷卡。</li>
+            <li>换汇：机场少量应急，主力在泗水/巴厘岛正规 money changer；避免路边超高汇率点。</li>
+            <li>通讯：优先 Telkomsel 或 XL，覆盖东爪哇和巴厘岛更稳；到 Labuan Bajo 及海上会有信号断点。</li>
+            <li>离线地图：Google Maps 区域离线包 + Maps.me / Organic Maps 备用。</li>
+          </ul>
+        </div>
+        <div class="card dark">
+          <h3>关键风险</h3>
+          <ul class="clean">
+            <li>布罗莫凌晨非常冷，火山口沙尘大；口罩和保暖层别省。</li>
+            <li>Tumpak Sewu 下谷底湿滑，手机防水袋和防滑鞋是刚需。</li>
+            <li>科莫多出海受风浪影响，提前一天和船公司确认集合点、船型、是否含门票。</li>
+            <li>Angel's Billabong 只在低潮、海况稳定时远观或短暂停留；涨潮和大浪不要下水。</li>
+            <li>Nusa Penida 西线道路窄且颠，晕车药、包车司机和码头时间要留余量。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-weather">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Climate & Outfit</div>
+          <h2>天气与穿搭</h2>
+        </div>
+        <p class="note">9 月底到 10 月初处在旱季尾声/雨季开端，海岛与山区体感差异很大。</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>天气判断</h3>
+          <p>Java、Bali、Komodo 所在的印尼西部和中部岛屿通常 5-9 月为旱季，10 月起逐渐进入雨季；全年白天平均约 28°C。你的行程横跨 9 月 26 日到 10 月 5 日，整体仍适合火山、海岛和出海，但要按“晴热 + 午后短阵雨 + 山区夜冷”的组合准备。</p>
+          <p>东爪哇高海拔区，如 Bromo，夜间和日出前会明显降温；海边和 Labuan Bajo / Bali 白天暴晒，紫外线强，船上风大但容易晒伤。</p>
+          <div>
+            <span class="tag">白天 27-31°C</span>
+            <span class="tag">Bromo 凌晨约 8-14°C</span>
+            <span class="tag">海上防晒强度高</span>
+            <span class="tag">10 月需带轻雨具</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>分场景穿搭</h3>
+          <ul class="clean">
+            <li>飞行与中转：短袖 + 薄长裤 + 轻外套，机舱和机场冷气足。</li>
+            <li>Tumpak Sewu：速干短袖/长袖、防滑涉水鞋或抓地好的溯溪鞋、可湿的短裤，背包加防雨罩。</li>
+            <li>Bromo：抓绒或薄羽绒、冲锋衣/防风外套、长裤、帽子、口罩；看完日出再逐步减衣。</li>
+            <li>Komodo 出海：泳衣内穿、长袖防晒衣、速干短裤、遮阳帽、偏光太阳镜、轻便拖鞋/溯溪鞋。</li>
+            <li>Bali 寺庙：有袖上衣，膝盖以下下装；Tanah Lot 可备围巾或 sarong。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-packing">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Packing List</div>
+          <h2>装备清单</h2>
+        </div>
+        <p class="note">按“火山、瀑布、海岛、航班转场”四种场景打包。</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>必带</h3>
+          <ul class="clean checklist">
+            <li>护照原件、签证/eVOA 打印件、返程机票、酒店订单</li>
+            <li>Love Bali Levy QR、All Indonesia Arrival Card QR</li>
+            <li>境外保险单、紧急联系人纸质备份</li>
+            <li>Visa / Mastercard、少量美元或人民币备用、IDR 现金</li>
+            <li>Type C/F 转换插头，支持 230V 的充电器</li>
+            <li>充电宝、数据线、相机电池、插线板</li>
+            <li>防晒霜 SPF50、晒后修复、墨镜、帽子</li>
+            <li>驱蚊液、止痒、创可贴、碘伏棉签</li>
+            <li>肠胃药、晕车/晕船药、感冒药、止痛药</li>
+            <li>防水手机袋、干湿分离袋、轻量雨衣</li>
+            <li>防滑涉水鞋、拖鞋、轻便运动鞋</li>
+            <li>口罩/魔术头巾，布罗莫沙尘和火山灰备用</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>可选但很提升体验</h3>
+          <ul class="clean">
+            <li>小型望远镜：Lovina 海豚和 Komodo 海面观察有用。</li>
+            <li>GoPro / 防水相机：瀑布水汽和出海浮潜环境比手机安全。</li>
+            <li>折叠水杯和电解质粉：火山日出、Nusa Penida 西线都容易脱水。</li>
+            <li>轻便坐垫或薄毯：凌晨 Bromo 等日出和船上休息舒服很多。</li>
+            <li>一次性马桶垫/湿巾：东爪哇路上补给点条件不稳定。</li>
+            <li>小额防水零钱包：船费、小费、停车费、码头税分开放。</li>
+          </ul>
+          <p class="note">电压提醒：Indonesia uses Type C/F, 230V, 50Hz。大多数手机/电脑充电器支持 100-240V，只需转换插头；吹风机、卷发棒需检查铭牌。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-dayplaybook">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Daily Playbook</div>
+          <h2>每日作战卡</h2>
+        </div>
+        <p class="note">同一天的详细攻略、傻瓜式执行、路书交通放在一起，旅途中不用上下翻找。</p>
+      </div>
+      <div class="day-playbook-grid">
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-09-26</strong><span>D1 抵达东爪哇</span></div><p>北京大兴 → 吉隆坡 → 泗水 → Lumajang, East Java。住宿 Indah Damai Cottages / 美丽和平小屋。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>航班 D7343 02:15-08:30，北京大兴到吉隆坡。</li><li>航班 QZ323 15:30-17:10，吉隆坡到 Surabaya Juanda。</li><li>抵达泗水后直接包车去 Lumajang，夜车以安全到达为第一目标。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>00:00 到大兴，问清行李是否直挂 SUB。</li><li>08:30 到吉隆坡，先找 QZ323 登机口，再吃饭充电。</li><li>17:10 到泗水，入境后取现金/SIM，联系司机。</li><li>上车前拍车牌，发实时位置，到酒店马上睡觉。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>机场：Beijing Daxing / Kuala Lumpur International / Surabaya Juanda。</li><li>酒店地址：Jl. Nasional III No.54, Besukcukit, Sidomulyo, Lumajang。</li><li>泗水到 Lumajang 约 3.5-5 小时，夜间只停正规加油站或便利店。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-09-27</strong><span>D2 Tumpak Sewu</span></div><p>Lumajang → Tumpak Sewu Waterfall → Teras Semeru → Cafe Lava Hostel。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>Tumpak Sewu 07:00-13:00，先看观景台，再决定是否下谷底。</li><li>Teras Semeru 远观 Semeru 火山，火山活动以当地提示为准。</li><li>晚上住 Cafe Lava Hostel，为 Bromo 凌晨日出做准备。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>06:00 穿涉水鞋，手机进防水袋。</li><li>07:00 到瀑布，先拍全景，别急着下谷底。</li><li>08:00 问向导水量和安全；雨大就不下谷底。</li><li>13:00 换干衣服午餐，下午转场到 Bromo 山脚。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>Tumpak Sewu 地址：Jl. Raya Dampit-Lumajang, Sidomulyo, Lumajang。</li><li>Cafe Lava Hostel 地址：Jl. Raya Bromo No.RT.03, Cemorolawang, Ngadisari。</li><li>Lumajang 到 Bromo 山脚路长且弯，尽量天黑前抵达。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-09-28</strong><span>D3 Bromo + 飞科莫多</span></div><p>Mount Bromo 02:00-10:00；IU726 15:30-18:00 泗水 → Labuan Bajo。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>凌晨 Jeep 看 Bromo 日出，再去沙海和火山口。</li><li>上午必须控制时间，下午赶 Surabaya Juanda 航班。</li><li>抵达 Labuan Bajo 后入住 Wimolas Guesthouse。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>01:30 起床，穿保暖层，证件随身。</li><li>02:00 Jeep 出发，提醒司机你要赶 IU726。</li><li>10:00 回酒店洗漱拿行李；晚于 10:30 就直接去机场。</li><li>18:00 抵达 Labuan Bajo，晚上确认 D4/D5 船。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>Bromo → Surabaya Airport 约 3.5-5 小时，堵车风险高。</li><li>航班：IU726，Surabaya Juanda → Komodo International Airport。</li><li>Wimolas Guesthouse：Jl. Soekarno Hatta, Gorontalo, Komodo, West Manggarai。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-09-29</strong><span>D4 海钓恢复日</span></div><p>Labuan Bajo 海钓半日游，下午休整补给。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>半日海钓用于恢复体力，不要把当天塞满。</li><li>下午采购 D5 出海用水、防晒、干粮和现金。</li><li>继续住 Wimolas Guesthouse。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>出海前问船家：接送、救生衣、水、午餐、钓具、取消政策。</li><li>上船前 30-60 分钟吃晕船药。</li><li>回酒店午睡，晚上确认 Komodo 船集合点和门票包含项。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>酒店到 Labuan Bajo 码头通常不远，但清晨集合别卡点。</li><li>所有船只以风浪为准，船长说取消就取消。</li><li>现金零钱分开放，码头和小费常用。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-09-30</strong><span>D5 Komodo National Park</span></div><p>科莫多国家公园、巨蜥、Padar / Pink Beach 等出海点位视船线和天气而定。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>Pitravel 原时间为 13:00-15:30，但常规一日出海通常更早。</li><li>巨蜥必须跟 ranger，不能喂食、靠近或单独离队。</li><li>Padar 和 Pink Beach 是否执行取决于船型、风浪和套餐。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>前一晚把泳衣、防晒衣、毛巾、防水袋、现金装好。</li><li>上船前拍船名，确认救生衣位置。</li><li>巨蜥徒步听 ranger 指挥；浮潜只在船员允许处下水。</li><li>返程后冲洗装备，确认 D6 QZ643。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>出海口：Labuan Bajo Harbour。</li><li>核心区域：Komodo National Park / Padar Island / Pink Beach。</li><li>不要要求船长硬赶点位，风浪优先于打卡。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-10-01</strong><span>D6 飞巴厘岛</span></div><p>QZ643 15:10-16:15，Komodo International Airport → Ngurah Rai International Airport。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>上午不加远景点，只整理、洗衣、休息。</li><li>抵达 Bali 后住 Rhadana Hotel。</li><li>晚上确认 D7 Sanur 码头船票和 Nusa Penida 包车。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>12:30 从酒店去 Komodo Airport。</li><li>15:10 飞 Bali，机上无餐食，提前买水。</li><li>16:15 抵达后用 Grab/Gojek 或酒店接送。</li><li>晚上补现金、防晒、水，早点睡。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>航班：QZ643。</li><li>酒店：Rhadana Hotel，Jl. Raya Kuta No.88, Kuta, Badung, Bali 80361。</li><li>机场到 Kuta/Badung 约 20-60 分钟，堵车看时段。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-10-02</strong><span>D7 Nusa Penida 西线</span></div><p>Kelingking Beach 08:30-10:30；Broken Beach 11:00-12:00；Angel's Billabong 12:15-13:15。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>Kelingking 观景为主，不建议一日游下到底部海滩。</li><li>Broken Beach 看天然拱桥和悬崖海湾。</li><li>Angel's Billabong 只在低潮且海况安全时靠近。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>05:30 起床，穿可湿鞋，泳衣内穿。</li><li>06:00 去 Sanur Harbour，找船公司柜台。</li><li>08:30 到 Kelingking，只在安全平台拍照。</li><li>下午按返程船时间提前回码头，别错过船。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>路线：Rhadana Hotel → Sanur Harbour → Nusa Penida → 西线包车。</li><li>岛上路颠，晕车药和水必须带。</li><li>返程后回 Rhadana Hotel，确认 D8 02:30-03:00 出发。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-10-03</strong><span>D8 Lovina + Ubud + Jimbaran</span></div><p>Lovina Dolphin Watching 05:30-08:00；Ubud Palace；Jimbaran Beach。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>这是全程第二高强度日，南部酒店往返 Lovina 很累。</li><li>Ubud Palace 只轻停留，不做深度乌布路线。</li><li>Jimbaran 日落海鲜需先确认重量、价格和税费。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>02:30 上车去 Lovina，上车就睡。</li><li>05:30 上船看海豚，手机进防水袋。</li><li>如果太累，取消 Ubud，回酒店午睡。</li><li>17:00 到 Jimbaran，看清菜单再点。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>路线：Kuta/Badung → Buleleng / Lovina → Gianyar / Ubud → Jimbaran。</li><li>全天车程长，司机必须提前约好。</li><li>回酒店后别加夜生活，D9 还要滑翔伞和 Tanah Lot。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-10-04</strong><span>D9 滑翔伞 + Tanah Lot</span></div><p>Tanah Lot 13:30-15:30；Krida Mandala I Ketut Lotri / Gunung Payung 一带滑翔伞。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>滑翔伞按风况执行，不要为了打卡硬飞。</li><li>Tanah Lot 最好改到日落前 60-90 分钟。</li><li>最后一晚必须整理行李和返程随身包。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>上午先问滑翔伞商家：风况、坐标、体重限制、保险。</li><li>滑翔伞不能飞就改 Uluwatu / Canggu 轻松线。</li><li>Tanah Lot 不站湿滑礁石外侧。</li><li>晚上把证件、药品、充电宝、外套放随身包。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>滑翔伞基地多在 Badung 南部 Gunung Payung / Kutuh。</li><li>Tanah Lot 在西北方向，两者不顺路，先按风况再去海神庙。</li><li>回酒店后确认 D10 机场车。</li></ul></div>
+          </div>
+        </article>
+
+        <article class="day-playbook-card">
+          <div class="playbook-head"><div><strong>2026-10-05</strong><span>D10 返程</span></div><p>Ngurah Rai International Airport 10:05 出发，新加坡中转 11 小时 45 分，06:35 抵达北京大兴。</p></div>
+          <div class="playbook-panels">
+            <div class="playbook-panel detail-panel"><h4>详细攻略</h4><ul><li>行李直达北京；新加坡停留时间长，但不要安排太满。</li><li>如入境新加坡，提前填 SG Arrival Card。</li><li>跨天航班注意当地时间和登机口。</li></ul></div>
+            <div class="playbook-panel execute-panel"><h4>傻瓜式执行</h4><ol><li>06:30 从酒店去机场，国际航班按提前 3 小时处理。</li><li>值机问清行李直挂、下一程登机牌、登机口开放时间。</li><li>新加坡只选 Jewel Changi 或滨海湾短线。</li><li>登机前先过安检边检，再购物吃饭。</li></ol></div>
+            <div class="playbook-panel road-panel"><h4>路书交通</h4><ul><li>机场：Ngurah Rai International Airport → Singapore Transit → Beijing Daxing。</li><li>随身包：护照、外套、充电器、药品、洗漱小包、银行卡现金。</li><li>到北京后按入境、行李、海关、回家交通顺序走。</li></ul></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="section-itinerary">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Day by Day</div>
+          <h2>详细行程</h2>
+        </div>
+        <p class="note">以下按原始 Word 行程扩写，未写明的航班时刻以出票信息为准。</p>
+      </div>
+      <div class="timeline">
+        <article class="day-card">
+          <div class="datebox"><strong>2026-09-26</strong><span>D1<br>抵达东爪哇</span></div>
+          <div class="day-content">
+            <div>
+              <h3>北京大兴 → 吉隆坡 → Surabaya 泗水 → Lumajang, East Java</h3>
+              <p>北京大兴国际机场出发，经吉隆坡国际机场中转约 7 小时，行李直挂泗水。抵达 Surabaya Juanda International Airport 后建议提前约好包车，直接前往 Lumajang, East Java 区域入住。Lumajang 是东爪哇的县/地区，适合作为 Tumpak Sewu 瀑布的前后落脚点。</p>
+              <ul class="clean">
+                <li>中转：若不入境马来西亚，确认登机牌是否全程出齐、行李牌目的地为 SUB。</li>
+                <li>Surabaya 泗水到 Lumajang：约 3.5-5 小时，夜间抵达更建议包车，不建议临时找车。</li>
+                <li>抵达后只做补给：水、早餐、现金、第二天瀑布门票零钱。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>美丽和平小屋 / Peaceful Beautiful Lodge</p></div>
+              <div class="mini"><h4>当天目标</h4><p>顺利入境、拿到现金/SIM、抵达 Lumajang 睡觉。</p></div>
+              <div class="mini"><h4>备选</h4><p>若航班晚点严重，考虑在泗水机场附近过夜，D2 清晨再去 Tumpak Sewu。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-09-27</strong><span>D2<br>瀑布与火山</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Tumpak Sewu 瀑布 → Semeru 视野 → Cemoro Lawang</h3>
+              <p>Tumpak Sewu 是行程第一天的体力重点。先看观景台，再根据水量、天气和体力决定是否下到谷底。谷底路段会涉水、攀爬湿滑石阶和竹梯，建议请当地向导。</p>
+              <ul class="clean">
+                <li>建议节奏：07:00-08:00 到入口，先观景台拍全景；09:00 前开始下谷底。</li>
+                <li>装备：涉水鞋、防水袋、速干衣、轻雨衣；相机镜头准备擦镜布。</li>
+                <li>午后转场：从 Lumajang / Malang 方向去 Bromo 山脚 Cemoro Lawang，山路时间长，尽量天黑前抵达。</li>
+                <li>Semeru 火山如有火山灰雨或喷发提醒，以当地管理方和司机建议为准，不强行靠近。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>熔岩咖啡旅馆 / Cafe Lava Hostel</p></div>
+              <div class="mini"><h4>重点</h4><p>Tumpak Sewu 谷底路不适合拖鞋；雨后水量大时只看观景台也值得。</p></div>
+              <div class="mini"><h4>晚间准备</h4><p>确认 Bromo Jeep 集合时间，通常 02:30-03:30；保暖衣物放在最外层。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-09-28</strong><span>D3<br>Bromo 日出</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Mount Bromo → Surabaya Airport → Labuan Bajo</h3>
+              <p>凌晨乘 Jeep 上观景点看 Bromo 火山群日出，之后下沙海，可骑马或步行到火山口楼梯。结束后回酒店拿行李，驱车前往泗水机场，飞往 Komodo Airport / Labuan Bajo。Labuan Bajo 属于 West Manggarai / Labuan Bajo 区域，是去 Komodo National Park 的主要出海口。</p>
+              <ul class="clean">
+                <li>日出点：Penanjakan / King Kong Hill 等，司机会按当日人流安排。</li>
+                <li>火山口：沙海灰尘大，口罩、墨镜、帽子非常必要；楼梯陡，别靠近无护栏边缘。</li>
+                <li>转机风险：Bromo 到泗水机场约 3.5-5 小时，至少给国内航班预留 3 小时机场缓冲。</li>
+                <li>飞行：泗水朱安达国际机场 → 科莫多国际机场，机上无餐食，提前备简餐。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>维莫拉斯宾馆 / Wimolas Guesthouse</p></div>
+              <div class="mini"><h4>当天体感</h4><p>凌晨冷、上午晒、下午赶路，属于全程最累的一天。</p></div>
+              <div class="mini"><h4>抵达后</h4><p>在 Labuan Bajo 码头街确认 D4 海钓和 D5 Komodo 出海集合点。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-09-29</strong><span>D4<br>海钓半日</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Labuan Bajo 海钓半日游</h3>
+              <p>前一天刚完成跨岛转场，这天安排半日海钓是合理的恢复日。建议上午出海，下午回镇上休整、洗衣、补给，并最终确认次日 Komodo National Park 船票。</p>
+              <ul class="clean">
+                <li>出海前确认：船型、救生衣、饮用水、钓具、是否接送酒店、是否含午餐。</li>
+                <li>晕船：提前 30-60 分钟服药，空腹和过饱都不适合。</li>
+                <li>下午：可去码头街、咖啡馆、日落点；不要把体力耗尽。</li>
+                <li>采购：防晒、矿泉水、干粮、防水袋、现金，D5 岛上一切更贵且选择少。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>维莫拉斯宾馆 / Wimolas Guesthouse</p></div>
+              <div class="mini"><h4>餐饮</h4><p>Labuan Bajo 海鲜店多，注意选择明码标价、评价稳定的店。</p></div>
+              <div class="mini"><h4>备选</h4><p>若风浪取消，可改 Batu Cermin Cave、Puncak Waringin 日落、镇上按摩。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-09-30</strong><span>D5<br>科莫多</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Komodo National Park 一日出海</h3>
+              <p>核心目标是在向导陪同下徒步寻找科莫多巨蜥，并尽量串联 Padar Island、Pink Beach、Manta Point / Taka Makassar 等海上点位。实际线路取决于船型、天气、风浪、园区规定和运营商套餐。</p>
+              <ul class="clean">
+                <li>集合：常见为 05:30-06:30 码头集合，快艇线路更早更紧凑。</li>
+                <li>巨蜥：必须跟 ranger，不要喂食、不要靠近、不要单独离队；女性经期需主动告知向导。</li>
+                <li>Padar：台阶暴晒，带足水；清晨拍照更好，正午很热。</li>
+                <li>Pink Beach：可浮潜但注意珊瑚，穿水母衣/防晒衣，不踩珊瑚。</li>
+                <li>费用：门票、ranger、港口费、浮潜装备是否包含必须书面确认。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>维莫拉斯宾馆 / Wimolas Guesthouse</p></div>
+              <div class="mini"><h4>安全</h4><p>风浪大时宁可少去点位，不要求船长硬赶。</p></div>
+              <div class="mini"><h4>当天晚餐</h4><p>选择离酒店近的餐厅，早点休息，为第二天飞巴厘岛留状态。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-10-01</strong><span>D6<br>飞巴厘岛</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Labuan Bajo → Bali Ngurah Rai → Badung / Kuta, Bali</h3>
+              <p>从科莫多国际机场飞往巴厘岛伍拉·赖国际机场。抵达后前往 Badung / Kuta, Bali 区域入住 Rhadana Hotel。Badung 是巴厘岛南部主要旅游县，Kuta、Seminyak、Canggu、Jimbaran、Nusa Dua 多在这一带或相邻区域。当天尽量不安排远距离景点，把它作为洗衣、补给和海边散步日。</p>
+              <ul class="clean">
+                <li>机场到酒店：Kuta / Badung, Bali 视交通约 20-60 分钟；用 Grab / Gojek 或酒店接送。</li>
+                <li>巴厘岛游客税：如果此前未在 Love Bali 支付，抵达巴厘岛后尽快完成。</li>
+                <li>补给：换现金、买水果/水/防晒、确认 Nusa Penida 一日游接送时间。</li>
+                <li>晚间：可去 Kuta / Seminyak 周边轻松吃饭，不建议熬夜。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>拉达纳酒店 / Rhadana Hotel</p></div>
+              <div class="mini"><h4>当天策略</h4><p>从“探险段”切到“海岛段”，恢复比打卡更重要。</p></div>
+              <div class="mini"><h4>备选</h4><p>若航班早到，可加 Jimbaran 简单日落海鲜，把 D8 晚上压力降低。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-10-02</strong><span>D7<br>Nusa Penida</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Klungkung / Nusa Penida 西线：Kelingking Beach → Broken Beach → Angel's Billabong</h3>
+              <p>经典 Nusa Penida 西线。Nusa Penida 行政上属于 Klungkung / Nusa Penida，而不是巴厘岛本岛南部。早上从 Sanur 码头坐船到 Nusa Penida，岛上包车游览 Kelingking Beach、Broken Beach、Angel's Billabong，傍晚返程巴厘岛。</p>
+              <ul class="clean">
+                <li>码头：Sanur 码头需提前到，雨天和节假日排队更久；拖鞋不适合码头搬运行李，穿可湿鞋。</li>
+                <li>Kelingking：上方观景最稳；下海滩坡陡且回程耗体力，不建议在一日游里硬下到底。</li>
+                <li>Broken Beach：适合航拍/广角，注意悬崖边没有完整护栏。</li>
+                <li>Angel's Billabong：只看低潮和海况，涨潮或大浪时不要下水，不要站在外侧湿滑岩面。</li>
+                <li>路况：岛上西线颠簸，晕车药和水必须带。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>拉达纳酒店 / Rhadana Hotel</p></div>
+              <div class="mini"><h4>交通</h4><p>酒店接送 → Sanur 船 → Nusa Penida 包车 → 回船 → 酒店。</p></div>
+              <div class="mini"><h4>备选</h4><p>若海况差取消登岛，改 Uluwatu / Melasti Beach / Garuda Wisnu Kencana。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-10-03</strong><span>D8<br>北线到南线</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Buleleng / Lovina Dolphins → Gianyar / Ubud Palace → Jimbaran Beach</h3>
+              <p>这天跨度很大：从南部酒店凌晨出发去北部 Buleleng / Lovina 看海豚，再折返中部 Gianyar / Ubud，傍晚去 Jimbaran。建议只在你愿意接受“超早起 + 长车程”的情况下执行。</p>
+              <ul class="clean">
+                <li>Lovina：通常 02:30-03:00 从 Kuta / Badung 出发，05:30 左右上船，海豚看到率高但不是保证。</li>
+                <li>船上：穿防风外套，带防水袋；不要期待安静独享，旺季船较多。</li>
+                <li>Ubud Palace：停留 30-60 分钟即可，可顺路吃午餐和买咖啡。</li>
+                <li>Jimbaran：日落前 45 分钟到海滩，选择明码标价店，点餐前确认重量和服务费。</li>
+                <li>现实提醒：从 Lovina 到 Ubud，再到 Jimbaran 车程长，堵车会吞掉体验。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>拉达纳酒店 / Rhadana Hotel</p></div>
+              <div class="mini"><h4>优化建议</h4><p>如果想更舒服，可取消 Ubud Palace，Lovina 后回酒店午睡，傍晚只去 Jimbaran。</p></div>
+              <div class="mini"><h4>备选</h4><p>不追海豚时，改成 Ubud + Tegallalang + Jimbaran 的中南线。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-10-04</strong><span>D9<br>海神庙日落</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Tanah Lot → 滑翔伞</h3>
+              <p>海神庙 Tanah Lot 是巴厘岛经典海岸庙宇，日落剪影最好。当天另有滑翔伞安排，需提前确认实际基地、风向、保险、体重限制和取消政策。</p>
+              <ul class="clean">
+                <li>Tanah Lot：涨潮时庙宇被海水包围，低潮可更接近外侧，但仍注意浪和湿滑礁石。</li>
+                <li>拍照：日落前 60-90 分钟到，先找机位，再慢慢等光线。</li>
+                <li>滑翔伞：巴厘岛常见基地在 Timbis / Nusa Dua / Uluwatu 一带，和 Tanah Lot 不在同一方向，需核实你行程里“克里达·曼达拉·伊·科图·洛特里”的具体坐标。</li>
+                <li>最后一晚：整理行李、确认次日机场接送、把湿衣物分袋。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>拉达纳酒店 / Rhadana Hotel</p></div>
+              <div class="mini"><h4>重点</h4><p>把 Tanah Lot 放日落；滑翔伞放上午/中午依风况执行。</p></div>
+              <div class="mini"><h4>备选</h4><p>滑翔伞取消时，改 Uluwatu Temple + Kecak Fire Dance 或 Canggu 咖啡海滩。</p></div>
+            </aside>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="datebox"><strong>2026-10-05</strong><span>D10<br>返程</span></div>
+          <div class="day-content">
+            <div>
+              <h3>Bali Ngurah Rai → Singapore Transit → Beijing Daxing</h3>
+              <p>伍拉·赖国际机场飞北京大兴，中转新加坡约 11 小时 45 分，跨天中转，行李直挂北京。若你持中国普通护照，目前中新互免签证安排允许短期入境新加坡最多 30 天，但仍需满足入境官判断、填写 SG Arrival Card，并携带后续机票。</p>
+              <ul class="clean">
+                <li>巴厘岛机场：国际出发建议提前 3 小时到；节假日安检和退税/值机可能排队。</li>
+                <li>新加坡中转：若入境游玩，提前提交 SG Arrival Card，保存返程登机牌/行程单。</li>
+                <li>11 小时玩法：轻装入境，选择 Jewel Changi、滨海湾短线或机场休息，不建议安排太满。</li>
+                <li>跨天：确认登机口和日期，手机日历用当地时间，避免把 10 月 6 日航段看错。</li>
+              </ul>
+            </div>
+            <aside>
+              <div class="mini"><h4>住宿</h4><p>无，跨天飞行。</p></div>
+              <div class="mini"><h4>行李</h4><p>行李直挂北京时，中转随身包需包含充电器、外套、洗漱、药品。</p></div>
+              <div class="mini"><h4>备选</h4><p>若不入境新加坡，可使用樟宜机场休息区、淋浴、Jewel 陆侧需入境。</p></div>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="section-stepguide">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Step-by-step Playbook</div>
+          <h2>傻瓜级执行版</h2>
+        </div>
+        <p class="note">根据 Pitravel 行程数据补充。照这个顺序做，遇到延误就执行每晚/每天的保底动作。</p>
+      </div>
+      <div class="step-guide-grid">
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D1 · 2026-09-26 · 北京 → 吉隆坡 → 泗水 → Lumajang</h3>
+            <p>航班：D7343 02:15-08:30，北京大兴国际机场 → Kuala Lumpur International Airport；QZ323 15:30-17:10，Kuala Lumpur → Surabaya Juanda。</p>
+          </div>
+          <div class="steps">
+            <time>前一晚</time><div>把护照、签证/eVOA、返程机票、酒店订单、保险、现金、银行卡放进随身包；行李箱外贴姓名电话。手机存好酒店地址：Indah Damai Cottages / 美丽和平小屋，Jl. Nasional III No.54, Besukcukit, Sidomulyo, Lumajang。</div>
+            <time>00:00</time><div>到北京大兴国际机场。值机时只问三件事：行李是否直挂 SUB / 泗水、是否给两段登机牌、吉隆坡是否同航站楼中转。</div>
+            <time>02:15</time><div>乘 D7343 起飞。上飞机前把泗水接机司机联系方式、酒店地址截图放相册第一张。</div>
+            <time>08:30</time><div>到吉隆坡后看转机屏幕，先找到 QZ323 登机口所在区域，再吃饭、洗漱、充电。不要入境马来西亚，除非航空公司明确要求重新值机。</div>
+            <time>15:30</time><div>乘 QZ323 飞 Surabaya Juanda International Airport。机上无餐食时提前买水和简餐。</div>
+            <time>17:10</time><div>泗水落地后按“入境 → 取行李或确认直挂 → ATM/换少量现金 → SIM/eSIM 检查 → 找司机”顺序走。别在机场临时谈长途车价。</div>
+            <time>夜间</time><div>包车去 Lumajang，约 3.5-5 小时。上车前拍车牌，给家人/同行发实时位置。到 Indah Damai Cottages 后只做三件事：洗澡、充电、把 D2 瀑布装备放门口。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D2 · 2026-09-27 · Tumpak Sewu + Semeru 视野 → Bromo 山脚</h3>
+            <p>核心地点：Tumpak Sewu Waterfall 07:00-13:00；Teras Semeru；住宿 Cafe Lava Hostel。</p>
+          </div>
+          <div class="steps">
+            <time>06:00</time><div>起床，穿速干衣裤和防滑涉水鞋。手机进防水袋，护照留酒店/车上安全处，不带下谷底。带 1.5L 水、现金、毛巾、干衣服。</div>
+            <time>07:00</time><div>到 Tumpak Sewu Waterfall。先在上方观景台拍全景，不要一到就急着下谷底。</div>
+            <time>08:00</time><div>确认天气和水量。如果下雨、水浑、向导说危险，就只看观景台；如果下谷底，必须跟向导，手脚并用慢走。</div>
+            <time>10:30</time><div>谷底拍照后开始回撤。不要等到体力耗尽再往上爬，回程比下去更累。</div>
+            <time>13:00</time><div>换干衣服，吃午餐。把湿衣物单独装袋，手机、相机擦干。</div>
+            <time>下午</time><div>去 Teras Semeru / 火山灰雨视野点看 Semeru。只远观，不追火山灰，不靠近封控区域。</div>
+            <time>傍晚</time><div>转场到 Cemoro Lawang / Cafe Lava Hostel，地址：Jl. Raya Bromo No.RT.03, Ngadisari, Sukapura, Probolinggo。到店后立刻确认 Jeep 明天几点来接。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D3 · 2026-09-28 · Bromo 日出 → 泗水机场 → Labuan Bajo</h3>
+            <p>景点：Mount Bromo 02:00-10:00。航班：IU726 15:30-18:00，Surabaya Juanda → Komodo International Airport。住宿：Wimolas Guesthouse。</p>
+          </div>
+          <div class="steps">
+            <time>01:30</time><div>起床穿保暖层：抓绒/薄羽绒、冲锋衣、长裤、帽子、口罩、墨镜。退房行李提前收好，别把证件留在房间。</div>
+            <time>02:00</time><div>Jeep 出发去 Bromo 日出点。上车前确认司机知道你 15:30 要赶 IU726 航班。</div>
+            <time>05:00</time><div>观景台等日出。人多时先保住脚下位置，不挤边缘。拍完日出再下沙海。</div>
+            <time>07:00</time><div>沙海和火山口。口罩全程戴好；骑马先谈好单程/往返价格；火山口台阶别靠外侧。</div>
+            <time>10:00</time><div>回 Cafe Lava Hostel，洗漱、吃早餐、拿行李。若已晚于 10:30，直接删减火山口或不洗澡，优先去机场。</div>
+            <time>10:30</time><div>包车去 Surabaya Juanda International Airport。目标 13:00 前到机场，最晚不要晚于 13:30。</div>
+            <time>15:30</time><div>乘 IU726 飞 Komodo International Airport。机上无餐食，机场买水和面包。</div>
+            <time>18:00</time><div>抵达 Labuan Bajo，去 Wimolas Guesthouse，地址：Jl. Soekarno Hatta, Gorontalo, Komodo, West Manggarai。晚上确认 D4 海钓和 D5 科莫多出海集合点。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D4 · 2026-09-29 · Labuan Bajo 海钓半日游</h3>
+            <p>这天是恢复日，别把它塞满。目标是适应海况、补给、确认 D5 出海。</p>
+          </div>
+          <div class="steps">
+            <time>出发前</time><div>问船家六件事：几点接、哪里集合、船上有没有救生衣、是否含水/午餐、钓具是否包含、风浪大是否退款或改期。</div>
+            <time>上船前</time><div>提前 30-60 分钟吃晕船药。手机、现金、护照复印件进防水袋，原件留酒店安全处。</div>
+            <time>上午</time><div>海钓半日。感觉晕就看远处水平线，不低头刷手机。别靠船边站太久。</div>
+            <time>下午</time><div>回酒店洗澡午睡。去码头街买第二天出海用水、干粮、防晒、现金零钱。</div>
+            <time>晚上</time><div>和 Komodo 船公司确认：集合时间、船名/车牌、是否去 Padar、Pink Beach、Komodo/Rinca、Manta Point，门票和 ranger 是否包含。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D5 · 2026-09-30 · Komodo National Park</h3>
+            <p>Pitravel 原数据为 13:00-15:30 科莫多国家公园，但一日出海通常更早。以船公司最终时间为准。</p>
+          </div>
+          <div class="steps">
+            <time>前一晚</time><div>把泳衣、防晒衣、毛巾、防水袋、现金、护照复印件、晕船药、1.5L 水装好。原件护照不下海。</div>
+            <time>清晨</time><div>按船公司时间到码头。上船前拍船名/船牌，确认救生衣位置。</div>
+            <time>Padar</time><div>如果去 Padar Island，少带东西上山，水和手机足够。台阶暴晒，别在悬崖边跳跃拍照。</div>
+            <time>巨蜥</time><div>进入 Komodo / Rinca 后必须跟 ranger。不要喂食、不要靠近、不要跑。女性经期主动告知向导。</div>
+            <time>浮潜</time><div>Pink Beach / Manta Point 视风浪决定。只在船员允许处下水，不踩珊瑚，不离船太远。</div>
+            <time>返程</time><div>回 Wimolas Guesthouse 后冲洗装备，确认 D6 QZ643 航班和去 Komodo Airport 的车。早点睡。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D6 · 2026-10-01 · Labuan Bajo → Bali</h3>
+            <p>航班：QZ643 15:10-16:15，Komodo International Airport → Ngurah Rai International Airport。住宿：Rhadana Hotel。</p>
+          </div>
+          <div class="steps">
+            <time>上午</time><div>睡到自然醒，整理湿衣物。不要临时加远景点。退房前检查充电器、护照、泳衣、相机电池。</div>
+            <time>12:30</time><div>从酒店出发去 Komodo International Airport。机场很近，但不要卡点。</div>
+            <time>15:10</time><div>乘 QZ643 飞 Bali。机上无餐食，登机前买水。</div>
+            <time>16:15</time><div>抵达 Ngurah Rai International Airport。用 Grab/Gojek 或酒店接送去 Rhadana Hotel，地址：Jl. Raya Kuta No.88, Kuta, Badung, Bali 80361。</div>
+            <time>晚上</time><div>完成三件事：洗衣/晾衣、补现金、防晒和水；确认 D7 Sanur 码头接送时间、船公司、是否含 Nusa Penida 岛上包车。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D7 · 2026-10-02 · Nusa Penida 西线</h3>
+            <p>时间：Kelingking Beach 08:30-10:30；Broken Beach 11:00-12:00；Angel's Billabong 12:15-13:15。</p>
+          </div>
+          <div class="steps">
+            <time>05:30</time><div>起床，穿可湿鞋/凉鞋，泳衣内穿。带护照复印件、现金、防水袋、晕船药、防晒衣。</div>
+            <time>06:00</time><div>酒店出发去 Sanur Harbour。到码头先找船公司柜台，不要跟陌生拉客走。</div>
+            <time>08:30</time><div>Kelingking Beach。只在观景台和安全平台拍照；除非你愿意牺牲后面景点和体力，否则不下到底部海滩。</div>
+            <time>11:00</time><div>Broken Beach。沿步道走，不跨越无护栏悬崖边。这里适合广角和视频。</div>
+            <time>12:15</time><div>Angel's Billabong。先问司机/当地人潮汐和浪况；涨潮、大浪、岩面湿滑时只远观，不下水。</div>
+            <time>下午</time><div>按返程船时间提前回码头。岛上路颠，宁可少拍 20 分钟，不要错过船。</div>
+            <time>晚上</time><div>回 Rhadana Hotel 后补水、拉伸、充电。确认 D8 Lovina 出发时间，通常需要 02:30-03:00 从 Kuta 出发。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D8 · 2026-10-03 · Lovina Dolphins → Ubud Palace → Jimbaran Beach</h3>
+            <p>时间：Lovina Dolphin Watching 05:30-08:00；Ubud Palace；Jimbaran Beach。</p>
+          </div>
+          <div class="steps">
+            <time>02:30</time><div>从 Rhadana Hotel 出发去 Lovina。上车就睡，随身带外套、晕车药、水和小面包。</div>
+            <time>05:30</time><div>Lovina 上传统小船看海豚。穿外套，手机进防水袋。看到海豚不要要求船夫追太近。</div>
+            <time>08:00</time><div>上岸后吃早餐。若已经很累，直接取消 Ubud，回酒店午睡，晚上去 Jimbaran。</div>
+            <time>中午</time><div>去 Ubud Palace。只安排 30-60 分钟，不进深度乌布路线；目标是拍照、吃饭、买咖啡。</div>
+            <time>17:00</time><div>到 Jimbaran Beach。先看菜单和海鲜重量，确认税费/服务费，再点餐。</div>
+            <time>晚上</time><div>回酒店后别再加夜生活。D9 还有滑翔伞和 Tanah Lot。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D9 · 2026-10-04 · Paragliding → Tanah Lot</h3>
+            <p>时间：Tanah Lot 13:30-15:30；Krida Mandala I Ketut Lotri / Gunung Payung 一带滑翔伞。</p>
+          </div>
+          <div class="steps">
+            <time>上午</time><div>先联系滑翔伞商家确认风况、基地坐标、体重限制、保险、是否能飞。不能飞就不要硬等全天。</div>
+            <time>出发</time><div>滑翔伞地点在 Badung 南部 Gunung Payung / Kutuh 方向；Tanah Lot 在西北方向，两者不顺路。先执行风况窗口，再去 Tanah Lot。</div>
+            <time>13:30</time><div>到 Tanah Lot。Pitravel 写 13:30-15:30，但如果想看经典剪影，建议调整到日落前 60-90 分钟。</div>
+            <time>现场</time><div>涨潮时不要靠近浪打湿的礁石；低潮时也不要走到外侧湿滑区域。保管好拖鞋和相机。</div>
+            <time>晚上</time><div>回 Rhadana Hotel 整理返程行李。把托运行李和随身包分开：充电宝、证件、药品、外套必须随身。</div>
+          </div>
+        </article>
+
+        <article class="step-guide-card">
+          <div class="step-head">
+            <h3>D10 · 2026-10-05 · Bali → Singapore Transit → Beijing</h3>
+            <p>航班：Ngurah Rai International Airport 10:05 出发，北京大兴国际机场 06:35 抵达，跨天；新加坡停留 11 小时 45 分，行李直达北京。</p>
+          </div>
+          <div class="steps">
+            <time>06:30</time><div>从 Rhadana Hotel 出发去 Ngurah Rai International Airport。国际航班按提前 3 小时到机场处理。</div>
+            <time>机场</time><div>值机时确认：行李直挂北京大兴、是否需要新加坡中转登机牌、下一程登机口开放时间。</div>
+            <time>10:05</time><div>离开巴厘岛。随身包里必须有外套、充电器、药品、洗漱小包、护照、现金/卡。</div>
+            <time>新加坡</time><div>如果入境新加坡，提前填 SG Arrival Card，随身带后续机票。11 小时以内只选 Jewel Changi 或滨海湾短线，不要排太满。</div>
+            <time>登机前</time><div>回机场后先过安检/边检，再吃饭购物。跨天航班看清日期和登机口，不要只看手机“中国时间”。</div>
+            <time>06:35</time><div>抵达北京大兴。下机后按“边检/入境 → 行李 → 海关 → 回家交通”走。到家先备份照片和票据。</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="section-roadbook">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Operational Roadbook</div>
+          <h2>路书</h2>
+        </div>
+        <p class="note">这部分按“实际怎么走”写，适合出发当天照着核对。</p>
+      </div>
+      <div class="card">
+        <div class="route-step">
+          <time>D1</time>
+          <div>
+              <h3>北京大兴 → 吉隆坡 → Surabaya 泗水 → Lumajang, East Java</h3>
+            <p>值机时确认行李直挂 SUB、两段登机牌、吉隆坡是否需要换航站楼。KLIA 7 小时中转可吃饭、充电、补觉；若不入境，活动范围受航站楼限制。泗水落地后先过海关、取 SIM/现金，再联系司机。夜车去 Lumajang 以“安全抵达”为主，中途只停正规加油站/便利店。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Juanda+International+Airport+to+Lumajang" target="_blank" rel="noreferrer">地图搜索：Juanda Airport → Lumajang</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D2</time>
+          <div>
+            <h3>Lumajang, East Java → Tumpak Sewu → Cemoro Lawang / Cafe Lava Hostel</h3>
+            <p>早出发去瀑布入口，先观景台，后谷底。瀑布结束后换干衣服再坐车，避免山路冷风。去 Bromo 山脚通常需经 Malang / Probolinggo 方向，路程长且山路弯多。抵达 Cafe Lava Hostel 后先确认 Jeep 司机、出发时间、是否含火山口和沙海。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Tumpak+Sewu+Waterfall+to+Cafe+Lava+Hostel+Bromo" target="_blank" rel="noreferrer">地图搜索：Tumpak Sewu → Cafe Lava Hostel</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D3</time>
+          <div>
+            <h3>Bromo 日出 → Surabaya Airport → West Manggarai / Labuan Bajo</h3>
+            <p>02:30 左右出门，日出后去沙海和火山口，预计 09:00-10:00 回住宿。洗漱、早餐、退房后立即去泗水机场。这个转场最怕堵车和火山段拖延，航班时间若偏早，应删减火山口或缩短停留。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Mount+Bromo+to+Juanda+International+Airport" target="_blank" rel="noreferrer">地图搜索：Mount Bromo → Juanda Airport</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D4-D5</time>
+          <div>
+            <h3>West Manggarai / Labuan Bajo 海上两日</h3>
+            <p>D4 半日海钓用于适应海况和恢复体力；D5 科莫多国家公园必须提前确认船公司资质、救生衣、午餐、浮潜装备、门票和 ranger。所有出海均以船长对风浪判断为准。Labuan Bajo 镇不大，酒店到码头通常车程不长，但清晨集合不要卡点。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Labuan+Bajo+Harbour+Komodo+National+Park" target="_blank" rel="noreferrer">地图搜索：Labuan Bajo Harbour / Komodo National Park</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D6-D7</time>
+          <div>
+            <h3>West Manggarai / Labuan Bajo → Bali → Sanur → Klungkung / Nusa Penida 西线</h3>
+            <p>D6 飞巴厘岛后住 Badung / Kuta, Bali，D7 清晨去 Sanur 码头。Nusa Penida 一日游建议选择“船票 + 岛上包车 + 酒店接送”组合，少一点现场协调。西线景点之间路况颠，Kelingking 下海滩会显著拉长时间，若返程船固定，不建议下到底。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Sanur+Harbour+to+Kelingking+Beach+Nusa+Penida" target="_blank" rel="noreferrer">地图搜索：Sanur Harbour → Kelingking Beach</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D8-D9</time>
+          <div>
+            <h3>Buleleng / Lovina · Gianyar / Ubud · Jimbaran · Tanah Lot · Paragliding</h3>
+            <p>D8 是全程第二高强度日：如果坚持 Buleleng / Lovina 海豚，从南部酒店往返会很累，司机要提前锁定。D9 滑翔伞需要按风况调整，不宜和 Tanah Lot 日落硬绑同一方向；把日落留给 Tanah Lot，滑翔伞以安全窗口优先。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Kuta+to+Lovina+Beach+to+Ubud+Palace+to+Jimbaran+Beach" target="_blank" rel="noreferrer">地图搜索：Kuta → Lovina → Ubud → Jimbaran</a></p>
+          </div>
+        </div>
+        <div class="route-step">
+          <time>D10</time>
+          <div>
+            <h3>Bali → Singapore → Beijing</h3>
+            <p>离开巴厘岛前检查是否有未干衣物、刀具/液体是否托运、充电宝随身。新加坡中转若入境，提前填 SG Arrival Card；若只在机场内休息，确认下一程登机口开放时间。跨天航班把手机时区设为自动。</p>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Ngurah+Rai+International+Airport" target="_blank" rel="noreferrer">地图搜索：Ngurah Rai International Airport</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Quick Checklist</div>
+          <h2>出发前核对</h2>
+        </div>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>提前 14-7 天</h3>
+          <ul class="clean">
+            <li>申请印尼 eVOA / Visitor Visa。</li>
+            <li>确认所有航班行李额和无餐食航段。</li>
+            <li>锁定泗水接机、Bromo Jeep、Komodo 船、Nusa Penida 一日游、Lovina 包车。</li>
+            <li>购买覆盖火山、涉水、出海、滑翔伞的境外旅行保险。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>提前 72 小时</h3>
+          <ul class="clean">
+            <li>填写 All Indonesia Arrival Card。</li>
+            <li>支付 Love Bali Levy 或确认抵达后支付方式。</li>
+            <li>打印护照首页、签证、酒店、保险、返程机票。</li>
+            <li>再次确认 Komodo 船和 Nusa Penida 船是否受天气影响。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>每天晚上</h3>
+          <ul class="clean">
+            <li>把第二天现金、小票、证件、药品放到同一随身袋。</li>
+            <li>充满手机、相机、充电宝。</li>
+            <li>离线保存司机电话、集合点、酒店地址。</li>
+            <li>看天气、潮汐和风浪，必要时删减景点。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-sources">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">References</div>
+          <h2>资料来源</h2>
+        </div>
+        <p class="note">出发前请再复核一次签证、税费、门票和天气，政策会变。</p>
+      </div>
+      <div class="source-list">
+        <a href="https://evisa.imigrasi.go.id/front/info/evoa" target="_blank" rel="noreferrer">Indonesia eVisa / Visitor Visa 官方信息：适用国家、30 天停留、IDR 500,000、护照 6 个月有效。</a>
+        <a href="https://allindonesia.imigrasi.go.id/" target="_blank" rel="noreferrer">All Indonesia Arrival Card 官方入口：印尼入境前填写。</a>
+        <a href="https://lovebali.baliprov.go.id/faq" target="_blank" rel="noreferrer">Love Bali 官方 FAQ：Foreign Tourist Levy 为 IDR 150,000 / 人 / 次。</a>
+        <a href="https://www.selectiveasia.com/indonesia-holidays/weather" target="_blank" rel="noreferrer">Selective Asia Indonesia Weather：Java、Bali、Komodo 旱季/雨季和山区温差参考。</a>
+        <a href="https://nusapenida.org/broken-beach-angel-billabong/" target="_blank" rel="noreferrer">NusaPenida.org：Broken Beach 与 Angel's Billabong 潮汐和安全提示。</a>
+        <a href="https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/indonesia/" target="_blank" rel="noreferrer">Electrical Safety First：Indonesia Type C/F plug, 230V, 50Hz。</a>
+        <a href="https://www.ica.gov.sg/news-and-publications/newsroom/media-release/mutual-30-day-visa-exemption-arrangement-between-singapore-and-the-people-s-republic-of-china" target="_blank" rel="noreferrer">Singapore ICA：中新普通护照 30 天互免签证安排。</a>
+        <a href="https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa-free-transit-facility" target="_blank" rel="noreferrer">Singapore ICA VFTF：转机入境条件说明，适合核对非普通护照/特殊旅行证件情况。</a>
+        <a href="https://www.pitravel.cn/plan/journey/19047532?source=home" target="_blank" rel="noreferrer">Pitravel 原始行程页：用于补充航班号、酒店地址、景点时间段和可执行顺序。</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Tumpak_sewu_waterfall.jpg" target="_blank" rel="noreferrer">图片来源：Wikimedia Commons - Tumpak Sewu Waterfall。</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Gunung_Bromo_sunrise_-_Indonesia.jpg" target="_blank" rel="noreferrer">图片来源：Wikimedia Commons - Gunung Bromo sunrise。</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">个人旅行路书版本。最后更新：2026-07-12。所有费用、政策、船班和天气以出发前官方与服务商确认为准。</div>
+  </footer>
+</body>
+</html>
